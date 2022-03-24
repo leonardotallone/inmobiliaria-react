@@ -14,7 +14,7 @@ Properties.init(
       allowNull: false,
     },
     price: {
-      type: S.INTEGER,
+      type: S.DECIMAL(10,3),
       allowNull: false,
     },
     location: {
@@ -36,3 +36,5 @@ Properties.init(
   },
   { sequelize: db, modelName: "properties" }
 );
+
+module.exports = Properties;
