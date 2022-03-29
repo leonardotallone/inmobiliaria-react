@@ -1,54 +1,44 @@
 const express = require("express");
-const routerProperties = express.Router();
-const { Op } = require("sequelize");
-const {
-  db,
-  User,
-  Product,
-  CarritoItem,
-  Order,
-  OrderItem,
-} = require("../models/index");
+const routerProperties = express.Router(); //"routerProperties" puede tener cualquier nombre, o simplemente router al igual q en los otros archivos.
+
+// Es necesario importar TODAS las tablas aun q sea de propiedades???
+const { Op } = require("sequelize"); // que es Op ???
+const { Users, Properties } = require("../models/index"); 
+const { db } = require ("../db")
+
 
 routerProperties.get("/", (req, res) => {
-  Product.findAll().then((guitar) => {
-    res.status(201).send(guitar);
+  Properties.findAll().then((properties) => {
+    res.status(201).send(properties);
   });
 });
 
 routerProperties.get("/select/:id", (req, res) => {
-  const { id } = req.params;
-  Product.findOne({ where: { id } })
-    .then((guitar) => {
-      res.status(201).send(guitar);
+  const { id } = req.params; 
+  Properties.findOne({ where: { id } })
+    .then((properties) => {
+      res.status(201).send(properties);
     })
     .catch((err) => {
       console.log(err);
     });
 });
 
-routerProperties.get("/:marca", (req, res) => {
-  const { marca } = req.params;
-  Product.findAll({ where: { marca } }).then((guitar) => {
-    res.status(201).send(guitar);
+routerProperties.get("/:location", (req, res) => {
+  const { location } = req.params;
+  Properties.findAll({ where: { location } }).then((location) => {
+    res.status(201).send(location);
   });
 });
 
-routerProperties.get("/:marca/:categoria", (req, res) => {
-  const { marca, categoria } = req.params;
-  Product.findAll({ where: { marca, categoria }, raw: true }).then((guitar) => {
-    res.status(201).send(guitar);
+routerProperties.get("/:location/:category", (req, res) => {
+  const { location, category } = req.params;
+  Properties.findAll({ where: { location, category }, raw: true }).then((properties) => { //que es el raw:true
+    res.status(201).send(properties);
   });
 });
+
+//Deberia agrear una ruta PRICE???
 
 module.exports = routerProperties;
 
-/*routerProduct.get("/:nombre", (req,res) => {
-    const nombre = req.params
-    const findProduct = await Product.findAll({ 
-        where:{
-            marca: {[op.startWith]: nombre},
-        }
-    })
-    return(res.status(201).send(findProduct))
-})*/
