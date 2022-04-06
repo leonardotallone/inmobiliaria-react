@@ -2,10 +2,9 @@ const express = require("express");
 const routerProperties = express.Router(); //"routerProperties" puede tener cualquier nombre, o simplemente router al igual q en los otros archivos.
 
 // Es necesario importar TODAS las tablas aun q sea de propiedades???
-const { Op } = require("sequelize"); // que es Op ???
-const { Users, Properties } = require("../models/index"); 
-const { db } = require ("../db")
-
+// const { Op } = require("sequelize"); // que es Op ???
+const { Properties } = require("../models/index");
+// const { db } = require ("../db")
 
 routerProperties.get("/", (req, res) => {
   Properties.findAll().then((properties) => {
@@ -14,7 +13,7 @@ routerProperties.get("/", (req, res) => {
 });
 
 routerProperties.get("/select/:id", (req, res) => {
-  const { id } = req.params; 
+  const { id } = req.params;
   Properties.findOne({ where: { id } })
     .then((properties) => {
       res.status(201).send(properties);
@@ -33,12 +32,13 @@ routerProperties.get("/:location", (req, res) => {
 
 routerProperties.get("/:location/:category", (req, res) => {
   const { location, category } = req.params;
-  Properties.findAll({ where: { location, category }, raw: true }).then((properties) => { //que es el raw:true
-    res.status(201).send(properties);
-  });
+  Properties.findAll({ where: { location, category }, raw: true }).then(
+    (properties) => {
+      //que es el raw:true
+      res.status(201).send(properties);
+    }
+  );
 });
 
-//Deberia agrear una ruta PRICE???
 
 module.exports = routerProperties;
-
