@@ -40,7 +40,7 @@ User.init(
       type: S.BOOLEAN,
       defaultValue: false,
     },
-    direction: {
+    adress: {
       type: S.STRING,
     },
     phoneNumber: {

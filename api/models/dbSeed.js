@@ -5,11 +5,11 @@ const Users = require("./Users");
 Users.create({
   name: "ADMIN",
   surname: "SUDO",
-  admin: true,
   email: "admin@propiedades.com",
   password: "1234",
+  admin: true,
+  adress: " 1234 55th Ave. New York, NY, EE. UU.",
   phoneNumber: "54 236 4321985",
-  direction: " 1234 55th Ave. New York, NY, EE. UU.",
 });
 
 Properties.bulkCreate([

@@ -1,2 +1,3 @@
 Que son los controllers.
 Perfil Administrador, se lo carga en DB desde el seedeo de DB?
+Local Strategy ()
