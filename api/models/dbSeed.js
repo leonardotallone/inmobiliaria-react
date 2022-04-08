@@ -17,20 +17,20 @@ Properties.bulkCreate([
     name: "Aparment in Manhattan",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 98.000,
-    location: "Manhattan",
+    location: "manhattan",
     category: "aparment",
     image:
-      "https://galeriemagazine.com/wp-content/uploads/2019/01/Dining_3-1024x674.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/1200px-Above_Gotham.jpg",
     availability: true,
   },
   {
     name: "Aparment in Manhattan",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 12.500,
-    location: "Manhattan",
+    location: "manhattan",
     category: "aparment",
     image:
-      "https://ap.rdcpix.com/124e524c24755a316ecfbae717b03f1al-m420864645od-w480_h360_x2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/1200px-Above_Gotham.jpg",
     availability: true,
   },
   {
@@ -38,10 +38,10 @@ Properties.bulkCreate([
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 8.570,
-    location: "Manhattan",
+    location: "manhattan",
     category: "house",
     image:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nest-seekers-nyc-apartment-view-1547672546.jpg?crop=1.00xw:0.755xh;0,0.168xh&resize=1200:*",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/1200px-Above_Gotham.jpg",
     availability: true,
   },
   {
@@ -49,30 +49,30 @@ Properties.bulkCreate([
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 13.700,
-    location: "Manhattan",
+    location: "manhattan",
     category: "house",
     image:
-      "https://imgs.6sqft.com/wp-content/uploads/2021/02/08170741/23-East-22nd-Street-48th-Floor-Living-Office-1024x763.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/1200px-Above_Gotham.jpg",
     availability: true,
   },
   {
     name: "Aparment in Brooklyn",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 98.000,
-    location: "Brooklyn",
+    location: "brooklyn",
     category: "aparment",
     image:
-      "https://galeriemagazine.com/wp-content/uploads/2019/01/Dining_3-1024x674.jpg",
+      "https://cdn.aarp.net/content/dam/aarp/travel/destinations/2019/05/1140-budget-brooklyn-esp.jpg",
     availability: true,
   },
   {
     name: "Aparment in Brooklyn",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 12.500,
-    location: "Brooklyn",
+    location: "brooklyn",
     category: "aparment",
     image:
-      "https://ap.rdcpix.com/124e524c24755a316ecfbae717b03f1al-m420864645od-w480_h360_x2.jpg",
+      "https://cdn.aarp.net/content/dam/aarp/travel/destinations/2019/05/1140-budget-brooklyn-esp.jpg",
     availability: true,
   },
   {
@@ -80,10 +80,10 @@ Properties.bulkCreate([
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 8.570,
-    location: "Brooklyn",
+    location: "brooklyn",
     category: "house",
     image:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nest-seekers-nyc-apartment-view-1547672546.jpg?crop=1.00xw:0.755xh;0,0.168xh&resize=1200:*",
+      "https://cdn.aarp.net/content/dam/aarp/travel/destinations/2019/05/1140-budget-brooklyn-esp.jpg",
     availability: true,
   },
   {
@@ -91,30 +91,30 @@ Properties.bulkCreate([
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 13.700,
-    location: "Brooklyn",
+    location: "brooklyn",
     category: "house",
     image:
-      "https://imgs.6sqft.com/wp-content/uploads/2021/02/08170741/23-East-22nd-Street-48th-Floor-Living-Office-1024x763.jpg",
+      "https://cdn.aarp.net/content/dam/aarp/travel/destinations/2019/05/1140-budget-brooklyn-esp.jpg",
     availability: true,
   },
   {
     name: "Aparment in New Jersey",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 98.000,
-    location: "New Jersey",
+    location: "new Jersey",
     category: "aparment",
     image:
-      "https://galeriemagazine.com/wp-content/uploads/2019/01/Dining_3-1024x674.jpg",
+      "https://a.travel-assets.com/findyours-php/viewfinder/images/res40/476000/476870-Newport-New-Jersey.jpg",
     availability: true,
   },
   {
     name: "Aparment in New Jersey",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 12.500,
-    location: "New Jersey",
+    location: "new Jersey",
     category: "aparment",
     image:
-      "https://ap.rdcpix.com/124e524c24755a316ecfbae717b03f1al-m420864645od-w480_h360_x2.jpg",
+      "https://a.travel-assets.com/findyours-php/viewfinder/images/res40/476000/476870-Newport-New-Jersey.jpg",
     availability: true,
   },
   {
@@ -122,10 +122,10 @@ Properties.bulkCreate([
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 8.570,
-    location: "New Jersey",
+    location: "new Jersey",
     category: "house",
     image:
-      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nest-seekers-nyc-apartment-view-1547672546.jpg?crop=1.00xw:0.755xh;0,0.168xh&resize=1200:*",
+      "https://a.travel-assets.com/findyours-php/viewfinder/images/res40/476000/476870-Newport-New-Jersey.jpg",
     availability: true,
   },
   {
@@ -133,10 +133,10 @@ Properties.bulkCreate([
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce blandit, leo a aliquet condimentum, metus ligula congue turpis, vel ullamcorper.",
     price: 13.700,
-    location: "New Jersey",
+    location: "new Jersey",
     category: "house",
     image:
-      "https://imgs.6sqft.com/wp-content/uploads/2021/02/08170741/23-East-22nd-Street-48th-Floor-Living-Office-1024x763.jpg",
+      "https://a.travel-assets.com/findyours-php/viewfinder/images/res40/476000/476870-Newport-New-Jersey.jpg",
     availability: true,
   },
 ]);

@@ -48,12 +48,11 @@ const SignUpForm = () => {
     e.preventDefault();
     dispatch(
       sendSignupRequest({ name, surname, email, password, adress, phoneNumber }))
-      // .then((user) => alert(`Thanks ${user.name} you are signed up!`))
       .then(() => navigate("/login"));
   };
 
   return (
-    <body>
+    <>
       <section className="hero is-warning is-fullheight">
         <div className="hero-body">
           <div className="container has-text-centered">
@@ -79,7 +78,7 @@ const SignUpForm = () => {
                         className="input is-small"
                         type="text"
                         placeholder="Username"
-                        autofocus=""
+                        autoFocus=""
                       />
                     </div>
                   </div>
@@ -92,7 +91,7 @@ const SignUpForm = () => {
                         className="input is-small"
                         type="text"
                         placeholder="Surname"
-                        autofocus=""
+                        autoFocus=""
                       />
                     </div>
                   </div>
@@ -105,7 +104,7 @@ const SignUpForm = () => {
                         className="input is-small"
                         type="email"
                         placeholder="Your email"
-                        autofocus=""
+                        autoFocus=""
                       />
                     </div>
                   </div>
@@ -155,7 +154,7 @@ const SignUpForm = () => {
           </div>
         </div>
       </section>
-    </body>
+    </>
   );
 };
 

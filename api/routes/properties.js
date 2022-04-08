@@ -1,9 +1,7 @@
 const express = require("express");
-const routerProperties = express.Router(); //"routerProperties" puede tener cualquier nombre, o simplemente router al igual q en los otros archivos.
-
-// Es necesario importar TODAS las tablas aun q sea de propiedades???
-// const { Op } = require("sequelize"); // que es Op ???
+const routerProperties = express.Router(); 
 const { Properties } = require("../models/index");
+// const { Op } = require("sequelize"); // que es Op ???
 // const { db } = require ("../db")
 
 routerProperties.get("/", (req, res) => {
@@ -34,7 +32,6 @@ routerProperties.get("/:location/:category", (req, res) => {
   const { location, category } = req.params;
   Properties.findAll({ where: { location, category }, raw: true }).then(
     (properties) => {
-      //que es el raw:true
       res.status(201).send(properties);
     }
   );
