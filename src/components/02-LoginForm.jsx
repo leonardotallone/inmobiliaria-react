@@ -14,8 +14,7 @@ const LoginForm = () => {
 
   // const user = useSelector((state) => state.user);
   // const user = JSON.parse(localStorage.getItem("user"));  
-  
-  
+    
   const emailHandler = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
@@ -32,7 +31,7 @@ const LoginForm = () => {
   
 
   return (
-    <body>
+    <>
       <section className="hero is-fullheight is-warning">
         <div className="hero-body">
           <div className="container has-text-centered">
@@ -79,16 +78,16 @@ const LoginForm = () => {
                 </form>
               </div>
               <p className="has-text-black">
-                <p>Already have an account?</p>
+                <a>Already have an account?  </a>
                 <a className="has-text-is-small" href="/signup">
-                  Sign Up
+                   Sign Up
                 </a>
               </p>
             </div>
           </div>
         </div>
       </section>
-    </body>
+    </>
   );
 };
 

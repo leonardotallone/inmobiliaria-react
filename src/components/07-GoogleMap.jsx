@@ -1,10 +1,10 @@
 import React from "react";
 
-const Map = () => {
+const GoogleMap = () => {
     return (
         <>
-        <p className="title has-text-black">New York</p>
+        <p className="title has-text-black">It Must Display a Google Map</p>
         </>
     )
 };
-export default Map;
+export default GoogleMap;

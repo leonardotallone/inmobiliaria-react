@@ -69,7 +69,7 @@ app.use((err, req, res, next) => {
       
 
 
-db.sync({ force: false }).then(() => {
+db.sync({ force: false}).then(() => {
   app.listen(8000, () => {
     console.log("Server listen on port 8000");
   });
