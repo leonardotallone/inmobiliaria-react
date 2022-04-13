@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer has-background-warning">
-      <div className="container is-fluid">
+    <footer className="hero has-background-warning is-small is-absolute">
+      <div className="hero-body">
         <div className="content has-text-centered">
           <p>
             <strong>The NY City Brooker</strong> by <a>Leonardo Tallone</a>. The

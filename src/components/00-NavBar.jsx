@@ -53,30 +53,28 @@ const Navbar = () => {
   };
   const allManhattan = (e) => {
     e.preventDefault();
-    dispatch(Manhattan());
+    dispatch(Manhattan()).then(() => navigate("/manhattan"));
   };
-  const allManhattabAparments = (e) => {
+  const allManhattanAparments = (e) => {
     e.preventDefault();
-    dispatch(ManhattanAparments());
+    dispatch(ManhattanAparments()).then(() => navigate("/manhattan/aparments"));
   };
   const allManhattanHouses = (e) => {
     e.preventDefault();
-    dispatch(ManhattanHouses());
+    dispatch(ManhattanHouses()).then(() => navigate("/manhattan/houses"));
   };
   const allNewJersey = (e) => {
     e.preventDefault();
-    dispatch(NewJersey());
+    dispatch(NewJersey()).then(() => navigate("/newjersey"));
   };
   const allNewJerseyAparments = (e) => {
     e.preventDefault();
-    dispatch(NewJerseyAparments());
+    dispatch(NewJerseyAparments()).then(() => navigate("/newjersey/aparments"));
   };
   const allNewJerseyHouses = (e) => {
     e.preventDefault();
-    dispatch(NewJerseyHouses());
+    dispatch(NewJerseyHouses()).then(() => navigate("/newjersey/houses"));
   };
-
-  // const properties = useSelector((state) => state.properties);
 
   return (
     <>
@@ -118,48 +116,49 @@ const Navbar = () => {
                   </a>
                 </a>
                 <hr className="navbar-divider" />
-                <a>
+                <Link to={"/brooklyn/map"}>
                   <a className="navbar-item">Map</a>
-                </a>
+                </Link>
               </div>
             </a>
 
-            <Link
-              to={"/manhattan"}
-              className="navbar-item has-dropdown is-hoverable"
-            >
-              <strong className="navbar-link">Manhattan</strong>
+            <a className="navbar-item has-dropdown is-hoverable">
+              <strong onClick={allManhattan} className="navbar-link">
+                Manhattan
+              </strong>
               <div className="navbar-dropdown">
-                <Link to={"/manhattan/aparments"}>
-                  <a className="navbar-item">Aparments</a>
-                </Link>
-                <Link to={"/manhattan/houses"}>
-                  <a className="navbar-item">Houses</a>
-                </Link>
+                <a>
+                  <a onClick={allManhattanAparments} className="navbar-item">
+                    Aparments
+                  </a>
+                </a>
+                <a>
+                  <a onClick={allManhattanHouses} className="navbar-item">Houses</a>
+                </a>
                 <hr className="navbar-divider" />
                 <Link to={"/manhattan/map"}>
                   <a className="navbar-item">Map</a>
                 </Link>
               </div>
-            </Link>
-            <Link
-              to={"/newjersey"}
+            </a>
+            <a
+              
               className="navbar-item has-dropdown is-hoverable"
             >
-              <strong className="navbar-link">New Jersey</strong>
+              <strong onClick={allNewJersey} className="navbar-link">New Jersey</strong>
               <div className="navbar-dropdown">
-                <Link to={"/newjersey/houses"}>
-                  <a className="navbar-item">Aparments</a>
-                </Link>
-                <Link to={"/newjersey/houses"}>
-                  <a className="navbar-item">Houses</a>
-                </Link>
+                <a>
+                  <a onClick={allNewJerseyAparments} className="navbar-item">Aparments</a>
+                </a>
+                <a>
+                  <a onClick={allNewJerseyHouses} className="navbar-item">Houses</a>
+                </a>
                 <hr className="navbar-divider" />
                 <Link to={"/newjersey/map"}>
                   <a className="navbar-item">Map</a>
                 </Link>
               </div>
-            </Link>
+            </a>
           </div>
 
           <div className="navbar-end">

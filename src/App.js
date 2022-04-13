@@ -8,6 +8,10 @@ import LoginForm from "./components/02-LoginForm";
 import SignUpForm from "./components/03-SignUpForm";
 import Footer from "./components/06-Footer";
 import GoogleMap from "./components/07-GoogleMap";
+import AdminProperties from "./components/Admin/AdminProperties";
+import AdminUsers from "./components/Admin/AdminUsers";
+import UserCard from "./components/Admin/UserCard"
+import PropertyCard from "./components/Admin/PropertyCard"
 
 const App = () => {
   return (
@@ -17,20 +21,15 @@ const App = () => {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />
 
-        <Route path="/brooklyn" element={<Grid />} />
-        <Route path="/brooklyn/aparments" element={<Grid />} />
-        <Route path="/brooklyn/houses" element={<Grid />} />
-        <Route path="/brooklyn/map" element={<GoogleMap />} />
+        <Route path="/:location" element={<Grid />} />
+        <Route path="/:location/:category" element={<Grid />} />
+        <Route path="/:location/map" element={<GoogleMap />} />
 
-        <Route path="/manhattan" element={<Grid />} />
-        <Route path="/manhattan/aparments" element={<Grid />} />
-        <Route path="/manhattan/houses" element={<Grid />} />
-        <Route path="/manhattan/map" element={<GoogleMap />} />
+        <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/usercard/:id" element={<UserCard />} />
+        <Route path="/admin/properties" element={<AdminProperties />} />
+        <Route path="/admin/property/:id" element={<PropertyCard />} />
 
-        <Route path="/newjersey" element={<Grid />} />
-        <Route path="/newjersey/aparments" element={<Grid />} />
-        <Route path="/newjersey/houses" element={<Grid />} />
-        <Route path="/newjersey/map" element={<GoogleMap />} />
       </Routes>
       <Footer />
     </>

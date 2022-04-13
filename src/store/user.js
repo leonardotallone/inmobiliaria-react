@@ -29,7 +29,7 @@ export const sendLogoutRequest = createAsyncThunk("LOGOUT", () => {
 });
 
 export const addToFavorite = createAsyncThunk(
-  "ADD_ TO_FAVORITE",
+  "ADD_TO_FAVORITE",
   (propertiesId, ThunkAPI) => {
     const { user } = ThunkAPI.getState();
     if (!user._id) throw new Error("You need to be logged in");
