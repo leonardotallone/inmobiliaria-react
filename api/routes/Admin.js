@@ -6,7 +6,7 @@ const passport = require("passport");
 
 // ------------------------------------------------- usuarios -------------------------------------------------
 
-routerAdmin.get("/showuser", (req, res) => {
+routerAdmin.get("/userslist", (req, res) => {
   Users.findAll()
     .then((users) => {
       res.status(201).send(users);
@@ -14,12 +14,23 @@ routerAdmin.get("/showuser", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-routerAdmin.get("/showuser/:id", (req, res) => {
+routerAdmin.get("/userslist/:id", (req, res) => {
   const { id } = req.params;
   Users.findOne({ where: { id } })
     .then((users) => {
       res.status(201).send(users);
     })
+    .catch((err) => console.log(err));
+});
+
+routerAdmin.post("/updateuser", (req, res) => {
+  const { admin } = req.body;
+  Users.update(req.body, {
+    where: {
+      admin: admin,
+    },
+  })
+    .then((data) => res.sendStatus(200))
     .catch((err) => console.log(err));
 });
 
@@ -32,20 +43,27 @@ routerAdmin.delete("/deleteuser/:id", function (req, res) {
   }).then((data) => res.sendStatus(202));
 });
 
-routerAdmin.post("/updateuser/", (req, res) => {
-  const { admin } = req.body;
-  Users.update(req.body, {
-    where: {
-      admin: admin,
-    },
-  })
-    .then((data) => res.sendStatus(200))
+// ------------------------------------------------- Properties -------------------------------------------------
+routerAdmin.get("/propertieslist", (req, res) => {
+  Properties.findAll()
+    .then((properties) => {
+      res.status(201).send(properties);
+    })
     .catch((err) => console.log(err));
 });
 
-// ------------------------------------------------- Properties -------------------------------------------------
+routerAdmin.get("/propertieslist/:id", (req, res) => {
+  const { id } = req.params;
+  Properties.findOne({ where: { id } })
+    .then((users) => {
+      res.status(201).send(users);
+    })
+    .catch((err) => console.log(err));
+});
 
-routerAdmin.post("/addproperties", (req, res) => {
+
+
+routerAdmin.post("/addproperty", (req, res) => {
   const { name, description, price, location, category, image, availability } =
     req.body;
   Properties.create({
@@ -72,7 +90,7 @@ routerAdmin.delete("/deleteproperties", (req, res) => {
     .catch(res.sendStatus(204));
 });
 
-routerAdmin.post("/updateproperties", (req, res) => {
+routerAdmin.post("/updateproperty", (req, res) => {
   const { name, description, price, location, category, image, availability } =
     req.body;
   Properties.update({

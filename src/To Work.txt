@@ -1,0 +1,13 @@
+Corregir
+
+ID, en el map de usuarios en AdminUsers.jsx
+Ejecutar el getOnUser() en UserCard.jsx
+titulo responsive.
+
+Avanzar.
+Editar la vista de grilla de propiedades.
+Hacer funcional el Add to Favorite.
+Hacer el filtro por precio.
+Aviso si no estas registrado.
+hooks al front / controllers al back
+Proteger las rutas del administrador con ternario
